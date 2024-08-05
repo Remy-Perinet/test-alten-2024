@@ -1,14 +1,14 @@
 <app-table
-    [data]="productsService.products"
-    [selectable]="true"
-    [config]="config"
-    [entity]="product"
-    [totalRecords]="productsService.products.length"
-    [allowAdd]="true"
-    [allowDelete]="true"
-    [allowEdit]="true"
-    (saved)="productsService.updateOrCreateProduct($event)"
-    (deleted)="productsService.deleteProducts($event)"
+  [data]="productsService.products"
+  [selectable]="true"
+  [config]="config"
+  [entity]="product"
+  [totalRecords]="productsService.products.length"
+  [allowAdd]="true"
+  [allowDelete]="true"
+  [allowEdit]="true"
+  (saved)="productsService.updateOrCreateProduct($event)"
+  (deleted)="productsService.deleteProducts($event)"
 >
 
 </app-table>
