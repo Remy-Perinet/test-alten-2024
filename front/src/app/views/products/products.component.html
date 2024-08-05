@@ -1,0 +1,33 @@
+<app-list 
+    [items]="productsService.products"
+    [gridItemTemplate]="gridItemTemplate"
+    [listItemTemplate]="listItemTemplate"
+></app-list>
+<ng-template let-item #listItemTemplate>
+    <div class="list-item-content">
+        <div class="list-item-content-item">{{item.category}}</div>
+        <div class="list-item-content-item">{{item.inventoryStatus}}</div>
+        <div class="list-item-content-item">{{item.name}}</div>
+        <div class="list-item-content-item">
+            <p-rating 
+                [(ngModel)]="item.rating"
+                [cancel]="false">
+            </p-rating>
+        </div>
+        <div class="list-item-content-item price-and-buy">{{item.price}}€ <p-button icon="pi pi-cart-plus"></p-button></div>
+    </div>
+</ng-template>
+<ng-template let-item #gridItemTemplate>
+    <div class="grid-item-content">
+        <div>{{item.category}}</div>
+        <div>{{item.inventoryStatus}}</div>
+        <div>{{item.name}}</div>
+        <div>
+            <p-rating 
+                [(ngModel)]="item.rating"
+                [cancel]="false">
+            </p-rating>
+        </div>
+        <div>{{item.price}}€ <p-button icon="pi pi-cart-plus"></p-button></div>
+    </div>
+</ng-template>
